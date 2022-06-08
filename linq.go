@@ -187,7 +187,7 @@ func (e Collection[T]) RemoveRange(start, count int) Collection[T] {
 
 	finish := start + count
 
-	for i := start; i < finish; i++ {
+	for i := start; i < finish && i+count < n; i++ {
 		e[i] = e[i+count]
 	}
 
