@@ -11,7 +11,7 @@ type Person struct {
 }
 
 
-persons := api.Collection[Person]{
+persons := linq.Collection[Person]{
 	Person{Name: "Bob", Age: 22},
 	Person{Name: "Alice", Age: 20},
 	Person{Name: "John Doe", Age: 44},
@@ -24,7 +24,7 @@ p1 := persons.
 
 fmt.Println(p1) // output: [{Alice 20} {Bob 22} {Peter 27}]
 
-a := api.Collection[string]{"00", "11", "2x", "3a", "4v", "5h", "6w", "7e", "8f", "9d"}
+a := linq.Collection[string]{"00", "11", "2x", "3a", "4v", "5h", "6w", "7e", "8f", "9d"}
 
 b := a.
 	RemoveRange(3, 4).
